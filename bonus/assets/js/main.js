@@ -10,8 +10,11 @@ let root = new Vue ({
         ],
         counter: 0,
         timing: 3000,
-        
     },
+    //!bonus slider automatico
+    created: function () {
+        setInterval(this.nextPics, this.timing);
+      },
     methods: {
         
         prevPics: function() {
@@ -33,5 +36,6 @@ let root = new Vue ({
         startInterval: function () {
           setInterval(this.nextPics, this.timing);  
         },
-    }
+    },
+    
 });
