@@ -22,7 +22,7 @@ let root = new Vue ({
         },
         nextPics: function() {
             this.counter++;
-            if (this.counter === this.images.length) {
+            if (this.counter > this.images.length) {
                 this.counter = 0;
             }
         },

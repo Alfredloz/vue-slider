@@ -10,6 +10,7 @@ let root = new Vue ({
         ],
         counter: 0,
         timing: 3000,
+        
     },
     methods: {
         
@@ -23,11 +24,12 @@ let root = new Vue ({
         },
         nextPics: function() {
             this.counter++;
-            if (this.counter === this.images.length) {
+            if (this.counter > this.images.length -1) {
                 this.counter = 0;
             }
         },
-        // funzione con setInterval per far andare le foto ogni 3 secondi
+        //!click sulla freccia destra!
+        // funzione con setInterval per far andare le foto ogni 3 secondi cliccando sulla freccai destra
         startInterval: function () {
           setInterval(this.nextPics, this.timing);  
         },
